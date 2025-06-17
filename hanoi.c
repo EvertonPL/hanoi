@@ -16,7 +16,7 @@ int main() {
 
     while (1) {
         mostrar_menu();
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         if (scanf("%d", &opcao) != 1) {
             while (getchar() != '\n');
             opcao = 0;
@@ -47,7 +47,7 @@ int main() {
                     printf("Escolha a quantidade de discos (1 a 8): ");
                     scanf("%d", &num_discos);
                     if (num_discos < 1 || num_discos > 8) {
-                        printf("Número de discos inválido. O jogo começará com 3 discos.\n");
+                        printf("Numero de discos invalido. O jogo comecara com 3 discos.\n");
                         num_discos = 3;
                     }
 
@@ -71,10 +71,10 @@ int main() {
                 mostrar_regras();
                 break;
             case 4:
-                printf("\nObrigado por jogar! Até a próxima!\n");
+                printf("\nObrigado por jogar! Ate a proxima!\n");
                 return 0;
             default:
-                printf("\nOpção inválida! Por favor, tente novamente.\n");
+                printf("\nOpcao invalida! Por favor, tente novamente.\n");
                 break;
         }
 

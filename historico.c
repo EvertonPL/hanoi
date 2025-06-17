@@ -60,9 +60,13 @@ void mostrarHistorico() {
 void buscarUsuario(const char* nome_jogador) {
     int achou = 0;
     Historico* atual = inicio;
-    printf("\nHistorico para o jogador '%s'\n", nome_jogador);
+    char nome_busca[100];
+    strcpy(nome_busca, nome_jogador);
+    nome_busca[strcspn(nome_busca, "\n")] = 0;
+
+    printf("\nHistorico para o jogador '%s'\n", nome_busca);
     while(atual != NULL) {
-        if (strcasecmp(atual->nome_jogador, nome_jogador) == 0) {
+        if (strcasecmp(atual->nome_jogador, nome_busca) == 0) {
             printf("Jogador: %s | Movimentos: %d | Discos: %d | Data: %s\n",
                    atual->nome_jogador, atual->movimentos, atual->discos, atual->data);
             achou = 1;
@@ -70,7 +74,7 @@ void buscarUsuario(const char* nome_jogador) {
         atual = atual->prox;
     }
     if (achou == 0){
-        printf("Nenhum registro encontrado para o jogador '%s'.\n", nome_jogador);
+        printf("Nenhum registro encontrado para o jogador '%s'.\n", nome_busca);
     }
 }
 

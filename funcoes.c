@@ -53,7 +53,7 @@ void iniciar_jogo(const char* nome_jogador, const char* data) {
 
         printf("Mover de qual torre para qual torre? (ex: A C): ");
         if (scanf(" %c %c", &nome_origem, &nome_destino) != 2) {
-            printf("\n>> Entrada invÃ¡lida! Use o formato 'Letra Letra'. <<\n");
+            printf("\n>> Entrada invalida! Use o formato 'Letra Letra'. <<\n");
             while (getchar() != '\n');
             continue;
         }

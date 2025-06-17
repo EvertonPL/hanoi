@@ -41,7 +41,7 @@ void limpar_torres() {
     liberar_pilha(&torreC);
 }
 
-// FUNÃ‡ÃƒO SIMPLIFICADA: Apenas roda o jogo com os dados recebidos.
+// FUNÇÃO SIMPLIFICADA: Apenas roda o jogo com os dados recebidos.
 void iniciar_jogo(const char* nome_jogador, const char* data) {
     int movimentos = 0;
 
@@ -143,8 +143,7 @@ void mostrar_regras() {
 
 
 // --- IMPLEMENTAÇÃO DAS FUNÇÕES ESTÁTICAS (PRIVADAS) ---
-// (Todas as suas funções static, como push, pop, mostrar_torres, etc. continuam aqui)
-// ... (O resto do arquivo é igual ao anterior)
+
 static void push(Torre *torre, int discos) {
     Node *novo = malloc(sizeof(Node));
     if (!novo) return;

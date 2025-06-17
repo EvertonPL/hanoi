@@ -42,7 +42,7 @@ void limpar_torres() {
 }
 
 // FUNÇÃO SIMPLIFICADA: Apenas roda o jogo com os dados recebidos.
-void iniciar_jogo(const char* nome_jogador, const char* data) {
+void iniciar_jogo(char* nome_jogador, const char* data) {
     int movimentos = 0;
 
     // Loop principal do jogo
@@ -71,6 +71,8 @@ void iniciar_jogo(const char* nome_jogador, const char* data) {
             getchar();
         }
     }
+
+    nome_jogador[strcspn(nome_jogador, "\n")] = 0;
 
     // Mensagem de vitória
     system("cls || clear");

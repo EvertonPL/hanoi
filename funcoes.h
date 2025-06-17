@@ -20,7 +20,7 @@ extern int n;
 
 // --- Funções Públicas ---
 void inicializar_torres(int quantidade);
-void iniciar_jogo(const char* nome_jogador, const char* data);
+void iniciar_jogo(char* nome_jogador, const char* data);
 void limpar_torres();
 
 // --- Funções de Menu ---

@@ -26,10 +26,7 @@ void carregarHistorico() {
         int movimentos, discos;
         char data[11];
 
-    while (fgets(nome_jogador, sizeof(nome_jogador), f) != NULL) {
-        fscanf(f, "%d", &movimentos);
-        fscanf(f, "%d", &discos);
-        fgets(data, sizeof(data), f);
+    while (fscanf(f, " %99[^\n]\n%d\n%d\n%10[^\n]\n", nome_jogador, &movimentos, &discos, data) == 4) {
         adicionarHistorico(nome_jogador, movimentos, discos, data);
     }
     fclose(f);
